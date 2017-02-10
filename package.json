@@ -1,0 +1,37 @@
+{
+  "name": "@chymz/promise-utils",
+  "version": "0.1.0",
+  "description": "Promise utils functions",
+  "main": "dist/index.js",
+  "jsnext:main": "src/index.js",
+  "scripts": {
+    "build": "node build/rollup",
+    "prepublish": "npm run build",
+    "test": "node_modules/.bin/mocha tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chymz/promise-utils.git"
+  },
+  "keywords": [
+    "promise",
+    "all",
+    "props",
+    "progress",
+    "utils"
+  ],
+  "author": "Simon Babay",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chymz/promise-utils/issues"
+  },
+  "homepage": "https://github.com/chymz/promise-utils#readme",
+  "devDependencies": {
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.1.8",
+    "mocha": "^3.2.0",
+    "rollup": "^0.41.4",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-uglify": "^1.0.1"
+  }
+}
