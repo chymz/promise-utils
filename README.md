@@ -1,14 +1,14 @@
 # PromiseUtils
 Some useful functions for promises
 
-**Install : **
+**Install :**
 
 `npm install @chymz/promise-utils`
 
 ## New method : `Promise.props()`
 Instead of using an array with `Promise.all()` you can pass an object to `PromiseUtils.props()`
 
-**Usage : **
+**Usage :**
 ```javascript
 import PromiseUtils from '@chymz/promise-utils';
 
@@ -30,7 +30,7 @@ PromiseUtils.props({
 ## Progress callback
 When you call [`all()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) or [`props()`](http://bluebirdjs.com/docs/api/promise.props.html) returned promise have an available `progress()` method to listen progress of promises executions
 
-**Usage : **
+**Usage :**
 ```javascript
 import PromiseUtils from '@chymz/promise-utils';
 
