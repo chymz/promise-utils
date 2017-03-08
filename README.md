@@ -5,7 +5,28 @@ Some useful functions for promises
 
 `npm install @chymz/promise-utils`
 
-## New method : `Promise.props()`
+## Progress callback
+When you call `all()`, `props()`, `series()` or `seriesProps()` returned promise
+have an available `progress()` method to listen progress of promises executions
+
+**Usage :**
+```javascript
+import PromiseUtils from '@chymz/promise-utils';
+
+PromiseUtils.all([
+  promise(),
+  promise(),
+  promise()
+])
+.progress((current, total) => {
+  let percent = current / total * 100;
+})
+.then(results => {
+  // ...
+})
+```
+
+## `props()`
 Instead of using an array with `Promise.all()` you can pass an object to
 `PromiseUtils.props()`
 
@@ -28,26 +49,11 @@ PromiseUtils.props({
 })
 ```
 
-## Progress callback
-When you call `all()` or `props()` returned promise have an available `progress()`
-method to listen progress of promises executions
+## `series()`
+@todo : description (see `tests/index.js`)
 
-**Usage :**
-```javascript
-import PromiseUtils from '@chymz/promise-utils';
-
-PromiseUtils.all([
-  promise(),
-  promise(),
-  promise()
-])
-.progress((current, total) => {
-  let percent = current / total * 100;
-})
-.then(results => {
-  // ...
-})
-```
+## `seriesProps()`
+@todo : description (see `tests/index.js`)
 
 ## Override Promise class used by this lib
 If you don't want to use native Promise class, you can do this :
@@ -66,7 +72,7 @@ global.Promise = Bluebird;
 
 ## Todo
 - Polyfill note for IE11 & Old browsers
-- `series()` & `seriesProps()` samples
+- `series()` & `seriesProps()` description/samples
 
 ## License
 See `LICENSE` file
