@@ -2,10 +2,6 @@ import all from './all';
 import progress from './progress';
 import PromiseUtils from './index';
 
-if (!Object.values) {
-  Object.values = obj => Object.keys(obj).map(i => obj[i]);
-}
-
 /**
  * Promise.props() with progress callback
  */
@@ -24,7 +20,7 @@ export default function(obj) {
       })
       .catch(err => {
         reject(err);
-      })
+      });
   });
 
   promise.progress = progress(values);

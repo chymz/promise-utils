@@ -6,7 +6,8 @@ Some useful functions for promises
 `npm install @chymz/promise-utils`
 
 ## New method : `Promise.props()`
-Instead of using an array with `Promise.all()` you can pass an object to `PromiseUtils.props()`
+Instead of using an array with `Promise.all()` you can pass an object to
+`PromiseUtils.props()`
 
 **Usage :**
 ```javascript
@@ -28,7 +29,8 @@ PromiseUtils.props({
 ```
 
 ## Progress callback
-When you call [`all()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) or [`props()`](http://bluebirdjs.com/docs/api/promise.props.html) returned promise have an available `progress()` method to listen progress of promises executions
+When you call `all()` or `props()` returned promise have an available `progress()`
+method to listen progress of promises executions
 
 **Usage :**
 ```javascript
@@ -61,6 +63,10 @@ PromiseUtils.Promise = Bluebird;
 global.Promise = Bluebird;
 
 ```
+
+## Todo
+- Polyfill note for IE11 & Old browsers
+- `series()` & `seriesProps()` samples
 
 ## License
 See `LICENSE` file
